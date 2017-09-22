@@ -1,0 +1,112 @@
+"let mapleader = " "
+let mapleader = ","
+"===================================
+"Basic settings
+"===================================
+set surround
+set hlsearch 
+set incsearch
+set ignorecase "忽略大小写
+set smartcase " 自动匹配
+set autoindent " 自动缩进
+set smartindent " 智能缩进
+set showmode
+set clipboard=unnamed
+"=================================
+"Easy system clipboard copy/paste
+"=================================
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+"===============================
+"Code Navigation
+"================================
+nnoremap <space>e :action Switcher<cr>
+nnoremap <space>f :action FileStructurePopup<cr>
+"nnoremap <space>g :action GotoSymbol<cr>
+nnoremap <space>a :action GotoAction<cr>
+nnoremap <space>j :action RecentFiles<CR>
+nnoremap <space>h :action QuickJavaDoc<CR>
+map gc :action GotoClass<CR>
+map gb :action Back<CR>
+map gf:action Forward<CR>
+map U :action VimRedo<cr>
+nnoremap <leader>k :action MethodUp<cr>
+nnoremap <leader>j :action MethodDown<cr>
+nnoremap <C-s> :action SurroundWith<cr>
+
+" BreakPoint
+nnoremap gwb :action ViewBreakpoints<CR>
+nnoremap <space>b :action ToggleLineBreakpoint<cr>
+"=============================
+"Code navigation
+"=============================
+nnoremap <space>u :action FindUsages<cr>
+nnoremap <space>] :action GotoImplementation<cr>
+nnoremap <space>[ :action GotoSuperMethod<cr>
+nnoremap <space>gt :action GotoTest<cr>
+nnoremap <space>k :action HighlightUsagesInFile<cr>
+nnoremap <leader>r :action RunClass<cr>
+nnoremap <space>r :action Run<cr>
+nnoremap <leader>d :action DebugClass<cr>
+nnoremap <space>d :action Debug<cr>
+
+nnoremap gne :action GotoNextError<CR>
+nnoremap gep :action GotoPreviousError<CR>
+nnoremap gnb :action GotoNextBookmark<CR>
+nnoremap gnx :action GotoNextIncompletePropertyAction<CR>
+nnoremap gpb :action GotoPreviousBookmark<CR>
+
+"===============================
+""Windows Action
+"=================================
+nmap sp :action SplitHorizontally<CR><C-j>
+nmap vsp :action SplitVertically<CR><C-l>
+nnoremap gl :action NextTab<CR>
+nnoremap gh :action PreviousTab<CR>
+nnoremap gj <C-W>j " 将光标移到下边窗口
+nnoremap gk <C-W>k " 将光标移到上边窗口
+
+nnoremap <space>u :action FindUsages<cr>
+nnoremap <space>] :action GotoImplementation<cr>
+nnoremap <space>[ :action GotoSuperMethod<cr>
+nnoremap <space>gt :action GotoTest<cr>
+nnoremap <space>k :action HighlightUsagesInFile<cr>
+nnoremap <leader>r :action RunClass<cr>
+nnoremap <space>r :action Run<cr>
+nnoremap <leader>d :action DebugClass<cr>
+nnoremap <space>d :action Debug<cr>
+nnoremap <leader>c :action CheckStyleCurrentFileAction<cr>]
+nnoremap <space>q :action CloseContent<cr>
+nnoremap <space>o :action ReopenClosedTab<cr>
+nnoremap <leader>ww <C-W>w " 将光标移到下一个窗口
+nnoremap <leader>wd <C-W>c " 关闭窗口
+nnoremap <leader>wh <C-W>h " 将光标移到左边窗口
+nnoremap <leader>ws <C-W>s " 水平分割窗口
+nnoremap <leader>wv <C-W>v " 垂直分割窗口
+"关闭当前窗口
+nnoremap <leader>d :action CloseEditor<CR>
+
+
+nnoremap <C-1> :action HideAllWindows<CR> "最大化编辑窗口 
+
+
+"================================
+"Run/Debug Action
+"===============================
+nnoremap <leader>r :action RunClass<cr>
+nnoremap <space>r :action Run<cr>
+nnoremap <leader>d :action DebugClass<cr>
+nnoremap <space>d :action Debug<cr>
+nnoremap <leader>c :action CheckStyleCurrentFileAction<cr>
+
+"Plugin setting
+"dash
+nnoremap <C-d> :action TagDocumentationNavigation<cr>
+
+"================================
+"Other Settings
+"================================
+noremap <CR> :
+nnoremap <leader>vs :source ~/.ideavimrc<CR>

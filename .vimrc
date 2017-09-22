@@ -17,8 +17,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " 外观{
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+	Plug 'chriskempson/tomorrow-theme'
+	Plug 'rakr/vim-one'
+    Plug 'itchyny/lightline.vim'
     Plug 'morhetz/gruvbox'
     Plug 'lifepillar/vim-wwdc16-theme'
     Plug 'KeitaNakamura/neodark.vim'
@@ -30,49 +31,29 @@ call plug#begin('~/.vim/plugged')
     Plug 'google/vim-colorscheme-primary'
     Plug 'lifepillar/vim-wwdc16-theme'
     Plug 'tpope/vim-markdown'
-    "Plug 'reedes/vim-colors-pencil '
     Plug 'altercation/vim-colors-solarized'
-	Plug 'edkolev/tmuxline.vim'
-	" Windows choose,Just pree '-'.
+    Plug 'edkolev/tmuxline.vim'
     Plug 't9md/vim-choosewin'
-	" Splash Screens, intent.putExtra , BatteryProfile.class, Boot Screen
-	Plug 'mhinz/vim-startify'
+    Plug 'mhinz/vim-startify'
     Plug 'gko/vim-coloresque'
     Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/limelight.vim'
     Plug 'chriskempson/tomorrow-theme'
+    Plug 'google/vim-colorscheme-primary'
+    Plug 'joshdick/onedark.vim'
+    Plug 'reedes/vim-colors-pencil'
+	Plug 'mikker/lightline-theme-pencil'
+	Plug 'nightsense/seabird'
+	Plug 'ayu-theme/ayu-vim'
+	Plug 'vim-syntastic/syntastic'
+
 "}
 
-" 提高插件{
-    "成对生成(),{},[]。
-    "Plug 'Raimondi/delimitMate'
-    Plug 'tpope/vim-surround'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'kien/ctrlp.vim' 
-    Plug 'majutsushi/tagbar'
-    Plug 'ervandew/supertab'    
-    Plug 'scrooloose/nerdtree'
-    "Plug 'scrooloose/syntastic'
-    Plug 'w0rp/ale'
-    
-"}
-
-" 前端 {
-    Plug 'mattn/emmet-vim'
-    Plug 'pangloss/vim-javascript'
-" }
-" 自动完成{
-    " Track the engine.
-    Plug 'SirVer/ultisnips'
-
-    " Snippets are separated from the engine. Add this if you want them:
-    Plug 'honza/vim-snippets'
-" }
 
 call plug#end()
 " setting{
     source ~/.vim/config/general.vim
-    source ~/.vim/config/airline.vim
+    source ~/.vim/config/lightline.vim
     source ~/.vim/config/choosewin.vim
 " }
 " ============================================================================
@@ -160,3 +141,25 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_error_symbol = '∰'
+let g:syntastic_style_error_symbol = '⦿'
+let g:syntastic_warning_symbol = '⌽'
+let g:syntastic_style_warning_symbol = '⦕'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+highlight link SyntasticErrorSign Question
+highlight link SyntasticWarningSign Question
+highlight link SyntasticStyleErrorSign Question
+highlight link SyntasticStyleWarningSign Question
+highlight clear SignColumn

@@ -52,6 +52,9 @@ ideavimrc for jetbrains product,It's so useful to me.this config efficient for m
     
     ![vim2.png](https://github.com/iQuinn/dotfiles/blob/master/img/vim2.png)
    
+   ![vim3.png](https://github.com/iQuinn/dotfiles/blob/master/img/vim3.png)
+   
+    ![vim4.png](https://github.com/iQuinn/dotfiles/blob/master/img/vim4.png)
    
 
 

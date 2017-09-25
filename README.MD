@@ -49,6 +49,8 @@ ideavimrc for jetbrains product,It's so useful to me.this config efficient for m
 
 4. screenshots
     ![vim1.png](https://github.com/iQuinn/dotfiles/blob/master/img/vim1.png)
+    
+    ![vim2.png](https://github.com/iQuinn/dotfiles/blob/master/img/vim2.png)
    
    
 
